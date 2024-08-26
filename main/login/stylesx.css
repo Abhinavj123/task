@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('back.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Fallback dark color */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Dark Overlay for Background Image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay with reduced visibility */
+    z-index: -1; /* Behind the content */
+}
+
+/* Auth Container */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(40, 40, 40, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-left: 750px;
+}
+
+/* Form Container */
+.form-container {
+    width: 95%;
+}
+
+/* Form Titles */
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f1f1f1; /* Light text color */
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e0e0e0; /* Light text color */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    background: #333; /* Dark input background */
+    color: #e0e0e0; /* Light text color */
+    border-radius: 4px;
+}
+
+.input-group input::placeholder {
+    color: #999; /* Light placeholder color */
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Toggle Link */
+form p {
+    text-align: center;
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+form p a {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+
+/* Page-Specific Styles */
+
+/* Login Page */
+.login-form-container h2 {
+    color: azure;
+}
+
+/* Register Page */
+.register-form-container h2 {
+    color: azure;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 15px;
+    }
+
+    .input-group input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #000000; /* Off-white text color for readability */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #000001; /* Dark purple background */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('billaneon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5; /* Adjust the opacity for transparency */
+  z-index: -1; /* Place it behind other content */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #3F2E3E; /* Greyish purple for container */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Darker shadow for contrast */
+}
+
+h1 {
+  text-align: center;
+  color: #FAF0E6; /* Off-white for heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.form-container {
+  background: #5C5470; /* Greyish purple for form container */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Darker shadow for contrast */
+}
+
+#taskForm input, #taskForm textarea, #taskForm button,
+button {
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #B9B4C7; /* Light purple border for inputs */
+  background: #352F44; /* Dark purple background for inputs */
+  color: #FAF0E6; /* Off-white text color for inputs */
+}
+
+#taskForm input:focus, #taskForm textarea:focus {
+  outline: none;
+  border-color: #B9B4C7; /* Light purple for focus */
+  box-shadow: 0 0 8px rgba(185, 180, 199, 0.3); /* Light purple shadow for focus */
+}
+
+#taskForm button,
+button {
+  background-color: #B9B4C7; /* Light purple button background */
+  color: #352F44; /* Dark purple text color for button */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#taskForm button:hover {
+  background-color: #A89BB4; /* Slightly darker shade of light purple on hover */
+}
+
+.task-list-container {
+  background: #5C5470; /* Greyish purple for task list container */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+#taskList li {
+  background: #A78295; /* Dark purple for task list items */
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.completeTask, .completeSubtask {
+  margin-right: 10px;
+}
+
+.subtaskList {
+  margin-left: 20px;
+  padding: 0;
+}
+
+.taskPriority {
+  margin-top: 5px;
+  font-weight: bold;
+  color: #101010; /* Light purple for task priority */
+}
+
+.progress-container {
+  margin: 20px 0;
+  background: #5C5470; /* Greyish purple for progress container */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #7c7393; /* Dark purple background for progress bar */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background-color: #B9B4C7; /* Light purple progress bar fill */
+  width: 0;
+  line-height: 20px;
+  color: #141414; /* Off-white text color in progress bar */
+  text-align: center;
+  transition: width 0.3s ease;
+}
